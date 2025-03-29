@@ -1,0 +1,29 @@
+<ion-content>
+  <div class="success-layer">
+    <div>
+      @if(unknownTrash) {
+      <img
+        class="success-layer__icon"
+        src="assets/icon/warning.svg"
+        alt="Icon"
+      />
+      <h2 class="success-layer__title waring">Проверьте изображение</h2>
+      <p class="success-layer__desc">
+        Сканирование прошло успешно, но мы не смогли распознать тип мусора.
+        Попробуйте снова.
+      </p>
+      } @else {
+      <img
+        class="success-layer__icon"
+        src="assets/icon/success.svg"
+        alt="Icon"
+      />
+      <h2 class="success-layer__title success">Сканирование прошло успешно</h2>
+      <p class="success-layer__desc">
+        Отправьте мусор в контейнер<br />для <b>{{ currType() }}</b>
+      </p>
+      }
+    </div>
+    <ion-button (click)="goToScanPage()">Продолжить</ion-button>
+  </div>
+</ion-content>

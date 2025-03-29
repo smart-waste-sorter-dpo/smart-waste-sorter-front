@@ -1,0 +1,25 @@
+<ion-content>
+  <div class="onboarding__container">
+    <div class="onboarding__icon-container">
+      <img class="onboarding__icon" [src]="slides[currentSlideIndex()].icon" />
+    </div>
+    <div class="onboarding-card">
+      <h2>{{ slides[currentSlideIndex()].title }}</h2>
+      <p class="onboarding-card__desc">
+        {{ slides[currentSlideIndex()].description }}
+      </p>
+      <div class="onboarding-card__footer">
+        <div class="onboarding-card__dots">
+          @for(slide of slides; track slide; let i = $index) {
+          <span [class.active]="i === currentSlideIndex()"></span>
+          }
+        </div>
+        @if(currentSlideIndex() < slides.length - 1) {
+        <ion-button (click)="nextSlide()">Далее</ion-button>
+        } @else {
+        <ion-button (click)="goToScanPage()">Перейти</ion-button>
+        }
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,137 @@
+ion-content {
+  --padding-top: 20px;
+}
+
+.onboarding {
+  &__container {
+    display: flex;
+  }
+
+  &__icon-container {
+    display: flex;
+    align-items: center;
+    margin: auto;
+  }
+
+  &__icon {
+    height: 200px;
+    margin-top: 150px;
+  }
+}
+
+.onboarding-card {
+  position: fixed;
+  display: flex;
+  padding: 40px;
+  flex-direction: column;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 454px;
+  min-height: 400px;
+  background-color: #d9d9d9;
+  border-top-left-radius: 76px;
+  border-top-right-radius: 76px;
+
+  ion-icon {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin: 32px 0 24px;
+    color: #07674b;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  &__desc {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0;
+
+    & span {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background-color: gray;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .active {
+      background-color: #07674b;
+    }
+  }
+
+  ion-button {
+    width: 165px;
+  }
+}
+
+.navigation-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-height: 780px) {
+  .onboarding__icon {
+    margin-top: 60px;
+  }
+
+  .onboarding-card {
+    padding: 28px;
+
+    h2 {
+      margin: 24px 0 24px;
+    }
+  }
+}
+
+@media (max-height: 685px) {
+  .onboarding__icon {
+    height: 150px;
+    margin-top: 60px;
+  }
+
+  .onboarding-card {
+    padding: 28px;
+    max-height: 420px;
+    min-height: 360px;
+
+    h2 {
+      margin: 24px 0 24px;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  .onboarding__icon {
+    height: 150px;
+    margin-top: 48px;
+  }
+
+  .onboarding-card {
+    padding: 28px;
+    max-height: 400px;
+    min-height: 330px;
+
+    h2 {
+      margin: 24px 0 24px;
+    }
+  }
+}
