@@ -1,5 +1,9 @@
 <ion-content>
   <div class="scan-container">
+    @if (!loading()) {
     <ion-button (click)="openCamera()">Сканировать</ion-button>
+    } @if (loading()) {
+    <ion-spinner name="crescent"></ion-spinner>
+    }
   </div>
 </ion-content>
